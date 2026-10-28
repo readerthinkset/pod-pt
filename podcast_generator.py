@@ -877,7 +877,7 @@ Return EXACTLY {batch_size} turns as a JSON array (no markdown):
             resp = requests.post("https://gen.pollinations.ai/v1/chat/completions", json={
                 "model": model_name,
                 "messages": [
-                    {"role": "system", "content": "You write natural A2-level Portuguese podcast scripts with VERY clear punctuation. Every sentence must have at least 2 commas for natural TTS pauses. Rafael and Ana strictly alternate. Highlight 1 key target word per turn in double asterisks. No filler sounds. CRITICAL: the target field must contain ONLY Portuguese (Latin letters). The translit field must repeat the target text exactly. English belongs only in the english field. Output single compact JSON array without unescaped newlines inside strings."},
+                    {"role": "system", "content": "You write natural A2-level Portuguese podcast scripts with VERY clear punctuation. Every sentence must have at least 2 commas for natural TTS pauses. Rafael and Ana strictly alternate. Highlight 1 key target word per turn in double asterisks. No filler sounds. CRITICAL: the target field must contain ONLY Portuguese (Latin letters). Each host addresses the OTHER host by name: Ana greets Rafael and Rafael greets Ana. No host ever addresses themselves by their own name; the only exception is introducing yourself. The translit field must repeat the target text exactly. English belongs only in the english field. Output single compact JSON array without unescaped newlines inside strings."},
                     {"role": "user", "content": prompt}
                 ],
                 "temperature": 0.8
